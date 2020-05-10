@@ -1,10 +1,11 @@
-package com.chatcore.swoosh
+package com.chatcore.swoosh.controller
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import com.chatcore.swoosh.utilities.EXTRA_LEAGUE
+import com.chatcore.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 class LeagueActivity : BaseActivity() {

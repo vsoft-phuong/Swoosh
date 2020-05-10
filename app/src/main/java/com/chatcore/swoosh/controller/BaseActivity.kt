@@ -1,4 +1,4 @@
-package com.chatcore.swoosh
+package com.chatcore.swoosh.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

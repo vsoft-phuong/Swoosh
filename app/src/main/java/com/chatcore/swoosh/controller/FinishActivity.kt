@@ -1,26 +1,23 @@
 package com.chatcore.swoosh.controller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.chatcore.swoosh.R
-import com.chatcore.swoosh.utilities.EXTRA_LEAGUE
-import com.chatcore.swoosh.utilities.EXTRA_SKILL
+import com.chatcore.swoosh.model.Player
+import com.chatcore.swoosh.utilities.EXTRA_PLAYER
 import kotlinx.android.synthetic.main.activity_finish.*
 
 class FinishActivity : AppCompatActivity() {
 
-    var league: String? = ""
-    var skill: String? = ""
-
+    lateinit var player: Player
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_finish)
 
-        league = intent.getStringExtra(EXTRA_LEAGUE)
-        skill = intent.getStringExtra(EXTRA_SKILL)
+        player = intent.getParcelableExtra(EXTRA_PLAYER)
 
-        searchLeagueText.text = "Looking for $league $skill league near you..."
+        searchLeagueText.text = "Looking for ${player.league} ${player.skill} league near you..."
 
     }
 }
